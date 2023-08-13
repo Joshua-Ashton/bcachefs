@@ -10,6 +10,7 @@ static const __maybe_unused unsigned bch_flags_to_vfs[] = {
 	[__BCH_INODE_IMMUTABLE]	= S_IMMUTABLE,
 	[__BCH_INODE_APPEND]	= S_APPEND,
 	[__BCH_INODE_NOATIME]	= S_NOATIME,
+	[__BCH_INODE_CASEFOLDED]	= S_CASEFOLD,
 };
 
 /* bcachefs inode flags -> FS_IOC_GETFLAGS: */
@@ -19,6 +20,7 @@ static const __maybe_unused unsigned bch_flags_to_uflags[] = {
 	[__BCH_INODE_APPEND]	= FS_APPEND_FL,
 	[__BCH_INODE_NODUMP]	= FS_NODUMP_FL,
 	[__BCH_INODE_NOATIME]	= FS_NOATIME_FL,
+	[__BCH_INODE_CASEFOLDED]	= FS_CASEFOLD_FL,
 };
 
 /* bcachefs inode flags -> FS_IOC_FSGETXATTR: */
